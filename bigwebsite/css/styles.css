@@ -1,0 +1,52 @@
+body {
+    min-height: 2500px;
+    min-width: 2500px;
+    overflow: auto;
+    background: rgb(217, 128, 234);
+  }
+
+.first{
+    font-weight:bolder;
+    font-size:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+.second{
+    font-weight:bolder;
+    font-size:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.third{
+    font-weight:bolder;
+    font-size:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.fourth{
+    font-weight:bolder;
+    font-size:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+.myImage {
+    display: block;
+    width: 350px;
+    height: 220px;
+    margin: 0 auto;
+    border: 5px solid white;
+    opacity: 0.9;
+    position: center;
+  }
