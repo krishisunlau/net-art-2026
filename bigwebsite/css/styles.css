@@ -1,5 +1,5 @@
 body {
-    min-height: 2800px;
+    min-height: 4000px;
     min-width: 2800px;
     overflow: auto;
     background: rgb(217, 128, 234);
@@ -7,7 +7,7 @@ body {
 
 .first{
     font-weight:bolder;
-    font-size:40px;
+    font-size:30px;;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
     left:0;
@@ -16,25 +16,28 @@ body {
 
 .second{
     font-weight:bolder;
-    font-size:40px;
+    font-size:30px;
+    color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
+    position: fixed;
     right:0;
     top:0;
 }
 
 .third{
     font-weight:bolder;
-    font-size:40px;
+    font-size:30px;
+    color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
+    position: fixed;
     right:0;
     bottom:0;
 }
 
 .fourth{
     font-weight:bolder;
-    font-size:40px;
+    font-size:30px;
+    color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
     left:0;
