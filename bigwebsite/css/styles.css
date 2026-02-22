@@ -20,7 +20,7 @@ body {
     font-size:30px;
     color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
+    position: absolute;
     right:0;
     top:0;
 }
@@ -30,7 +30,7 @@ body {
     font-size:30px;
     color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
+    position: absolute;
     right:0;
     bottom:0;
 }
@@ -40,8 +40,13 @@ body {
     font-size:30px;
     color:rgb(237, 120, 17);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
+    position:absolute;
     left:0;
     bottom:0;
 }
+
+.second img {
+    width: 200px;
+    height: auto;
+  }
 
