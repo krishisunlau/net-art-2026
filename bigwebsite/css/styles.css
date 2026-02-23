@@ -13,7 +13,7 @@ html, body {
   }
   
   #instruction {
-    position:absolute;
+    position: absolute;
     top: 20px;
     left: 20px;
     width: 360px;
@@ -68,11 +68,11 @@ html, body {
     text-decoration: underline;
   }
   
-  .second { top: 20px;   left: 2420px; }
+  .second { top: 20px; left: 2420px; }
   .third  { top: 2620px; left: 2420px; }
   .fourth { top: 2620px; left: 20px; }
   
-  .smileyImg {
+  .scrollImg {
     width: 10px;
     height: auto;
     display: block;
