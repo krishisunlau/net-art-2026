@@ -73,8 +73,8 @@ html, body {
   .fourth { top: 2620px; left: 20px; }
   
   .smileyImg {
-    width: 90px;
-    height: 90px;
-    border: 3px solid black;
-    opacity: 0.95;
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 5px 0;
   }
