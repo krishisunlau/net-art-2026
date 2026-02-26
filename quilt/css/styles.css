@@ -15,23 +15,23 @@
     height: 100%;
   }
 
-  .item1  { background: linear-gradient(90deg, #f0b189, #0707cc); }
-  .item2  { background: linear-gradient(90deg, #0707cc, #f0b189); }
-  .item3  { background: linear-gradient(90deg, #f0b189, #0707cc); }
-  .item4  { background: linear-gradient(90deg, #0707cc, #f0b189); }
-  .item5  { background: linear-gradient(90deg, #f0b189, #0707cc); }
-  .item6  { background: linear-gradient(90deg, #de7839, #0707cc); }
-  .item7  { background: linear-gradient(90deg, #0707cc, #de7839); }
-  .item8  { background: linear-gradient(90deg, #de7839, #0707cc); }
-  .item9  { background: linear-gradient(90deg, #0707cc, #de7839); }
-  .item10 { background: linear-gradient(90deg, #de7839, #0707cc); }
-  .item11 { background: linear-gradient(90deg, #f07d77, #0707cc); }
-  .item12 { background: linear-gradient(90deg, #0707cc, #f07d77); }
-  .item13 { background: linear-gradient(90deg, #f07d77, #0707cc); }
-  .item14 { background: linear-gradient(90deg, #0707cc, #f07d77); }
-  .item15 { background: linear-gradient(90deg, #f07d77, #0707cc); }
-  .item16 { background: linear-gradient(90deg, #f14729, #0707cc); }
-  .item17 { background: linear-gradient(90deg, #0707cc, #f14729); }
-  .item18 { background: linear-gradient(90deg, #f14729, #0707cc); }
-  .item19 { background: linear-gradient(90deg, #0707cc, #f14729); }
-  .item20 { background: linear-gradient(90deg, #f14729, #0707cc); }
+  .item1  { background: linear-gradient(90deg, #e8de98, #0707cc); }
+  .item2  { background: linear-gradient(90deg, #0707cc, #e8de98); }
+  .item3  { background: linear-gradient(90deg, #e8de98, #0707cc); }
+  .item4  { background: linear-gradient(90deg, #0707cc, #e8de98); }
+  .item5  { background: linear-gradient(90deg, #e8de98, #0707cc); }
+  .item6  { background: linear-gradient(90deg, #a0ca75, #0707cc); }
+  .item7  { background: linear-gradient(90deg, #0707cc, #a0ca75); }
+  .item8  { background: linear-gradient(90deg, #a0ca75, #0707cc); }
+  .item9  { background: linear-gradient(90deg, #0707cc, #a0ca75); }
+  .item10 { background: linear-gradient(90deg, #a0ca75, #0707cc); }
+  .item11 { background: linear-gradient(90deg, #75d9d8, #0707cc); }
+  .item12 { background: linear-gradient(90deg, #0707cc, #75d9d8); }
+  .item13 { background: linear-gradient(90deg, #75d9d8, #0707cc); }
+  .item14 { background: linear-gradient(90deg, #0707cc, #75d9d8); }
+  .item15 { background: linear-gradient(90deg, #75d9d8, #0707cc); }
+  .item16 { background: linear-gradient(90deg, #b475d9, #0707cc); }
+  .item17 { background: linear-gradient(90deg, #0707cc, #b475d9); }
+  .item18 { background: linear-gradient(90deg, #b475d9, #0707cc); }
+  .item19 { background: linear-gradient(90deg, #0707cc, #b475d9); }
+  .item20 { background: linear-gradient(90deg, #b475d9, #0707cc); }
