@@ -6,8 +6,8 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    height: 200vh;                         
-    width: 200vw;                          
+    height: 100vh;                         
+    width: 100vw;                          
 }
 
   .grid-item {
