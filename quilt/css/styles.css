@@ -4,37 +4,34 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    height: 100vh;                         
-    width: 100vw;                          
-}
-
+    grid-template-columns: repeat(5, 1fr);  
+    grid-template-rows: repeat(4, 1fr);     
+    height: 100vh;
+    width: 100vw;
+  }
+  
   .grid-item {
-    /*background-image: url('quilt/geogeo.jpg');*/
-    background-size: cover; 
-    background-position: center; 
-    height: 20vh;                         
-    width: 20%;   
-}
+    background-size: cover;
+    background-position: center;
+  }
 
-.item1 { background-color: linear-gradient(#e58942, #beb314 ); } 
-.item2 { background-color: #131f15; }
-.item3 { background-color: #161924; } 
-.item4 { background-color: #6d6d09; } 
-.item5 { background-color: #391339; } 
-.item6 { background-color: #206767; } 
-.item7 { background-color: #573f11; } 
-.item8 { background-color: #251325; } 
-.item9 { background-color: #232014; } 
-.item10 { background-color: #524745; } 
-.item11 { background-color: #524745; } 
-.item12 { background-color: #131f15; }
-.item13 { background-color: #161924; } 
-.item14 { background-color: #6d6d09; } 
-.item15 { background-color: #391339; } 
-.item16 { background-color: #206767; } 
-.item17 { background-color: #573f11; } 
-.item18 { background-color: #251325; } 
-.item19 { background-color: #232014; } 
-.item20 { background-color: #232014; } 
+  .item1  { background: linear-gradient(90deg, #ff9a44, #ff6a00); }
+  .item2  { background: linear-gradient(90deg, #ff6a00, #ee0979); }
+  .item3  { background: linear-gradient(90deg, #ee0979, #c31432); }
+  .item4  { background: linear-gradient(90deg, #c31432, #240b36); }
+  .item5  { background: linear-gradient(90deg, #240b36, #0f2027); }
+  .item6  { background: linear-gradient(270deg, #0f2027, #203a43); }
+  .item7  { background: linear-gradient(270deg, #203a43, #2c5364); }
+  .item8  { background: linear-gradient(270deg, #2c5364, #134e5e); }
+  .item9  { background: linear-gradient(270deg, #134e5e, #71b280); }
+  .item10 { background: linear-gradient(270deg, #71b280, #c7f8ff); }
+  .item11 { background: linear-gradient(90deg, #c7f8ff, #fbd786); }
+  .item12 { background: linear-gradient(90deg, #fbd786, #f7797d); }
+  .item13 { background: linear-gradient(90deg, #f7797d, #ff6a00); }
+  .item14 { background: linear-gradient(90deg, #ff6a00, #ff9a44); }
+  .item15 { background: linear-gradient(90deg, #ff9a44, #ffb347); }
+  .item16 { background: linear-gradient(270deg, #ffb347, #ffcc33); }
+  .item17 { background: linear-gradient(270deg, #ffcc33, #f7971e); }
+  .item18 { background: linear-gradient(270deg, #f7971e, #ffd200); }
+  .item19 { background: linear-gradient(270deg, #ffd200, #f83600); }
+  .item20 { background: linear-gradient(270deg, #f83600, #ff512f); }
