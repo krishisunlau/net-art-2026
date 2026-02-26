@@ -14,8 +14,8 @@
     /*background-image: url('quilt/geogeo.jpg');*/
     background-size: cover; 
     background-position: center; 
-    height: 100vh;                         
-    width: 100%;   
+    height: 20vh;                         
+    width: 20%;   
 }
 
 .item1 { background-color: linear-gradient(#e58942, #beb314 ); } 
