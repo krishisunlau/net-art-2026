@@ -1,0 +1,86 @@
+Style · CSS
+Copy
+
+#toggle { display: none; }
+
+body { margin: 0; }
+
+#screen {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0a0e1a;
+  transition: background 1.2s ease;
+}
+
+.hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  top: -60px;
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: fall linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes fall {
+  from { transform: translateY(0); }
+  to   { transform: translateY(110vh); }
+}
+
+.d1  { left: 2%;   font-size: 1.4rem; animation-duration: 4s;   animation-delay: 0s;    }
+.d2  { left: 7%;   font-size: 2rem;   animation-duration: 6s;   animation-delay: 1.5s;  }
+.d3  { left: 13%;  font-size: 1.2rem; animation-duration: 3.5s; animation-delay: 0.7s;  }
+.d4  { left: 18%;  font-size: 2.4rem; animation-duration: 5s;   animation-delay: 2.2s;  }
+.d5  { left: 24%;  font-size: 1.6rem; animation-duration: 4.5s; animation-delay: 0.3s;  }
+.d6  { left: 30%;  font-size: 1.3rem; animation-duration: 6s;   animation-delay: 3s;    }
+.d7  { left: 36%;  font-size: 2rem;   animation-duration: 3.8s; animation-delay: 1s;    }
+.d8  { left: 41%;  font-size: 1.5rem; animation-duration: 5.5s; animation-delay: 2.8s;  }
+.d9  { left: 47%;  font-size: 2.2rem; animation-duration: 4s;   animation-delay: 0.5s;  }
+.d10 { left: 52%;  font-size: 1.4rem; animation-duration: 6.5s; animation-delay: 1.8s;  }
+.d11 { left: 57%;  font-size: 1.8rem; animation-duration: 4.2s; animation-delay: 3.5s;  }
+.d12 { left: 63%;  font-size: 2.6rem; animation-duration: 5s;   animation-delay: 0.9s;  }
+.d13 { left: 68%;  font-size: 1.3rem; animation-duration: 3.6s; animation-delay: 2s;    }
+.d14 { left: 73%;  font-size: 2rem;   animation-duration: 6s;   animation-delay: 1.2s;  }
+.d15 { left: 78%;  font-size: 1.6rem; animation-duration: 4.8s; animation-delay: 0.4s;  }
+.d16 { left: 83%;  font-size: 1.2rem; animation-duration: 5.2s; animation-delay: 2.6s;  }
+.d17 { left: 88%;  font-size: 2.4rem; animation-duration: 3.9s; animation-delay: 1.6s;  }
+.d18 { left: 93%;  font-size: 1.8rem; animation-duration: 6s;   animation-delay: 0.1s;  }
+.d19 { left: 10%;  font-size: 2rem;   animation-duration: 4.6s; animation-delay: 4s;    }
+.d20 { left: 45%;  font-size: 1.5rem; animation-duration: 5.8s; animation-delay: 2.4s;  }
+.d21 { left: 55%;  font-size: 1.3rem; animation-duration: 3.5s; animation-delay: 3.8s;  }
+.d22 { left: 20%;  font-size: 2.2rem; animation-duration: 4s;   animation-delay: 1.1s;  }
+.d23 { left: 65%;  font-size: 1.7rem; animation-duration: 6.2s; animation-delay: 0.6s;  }
+.d24 { left: 75%;  font-size: 1.4rem; animation-duration: 5s;   animation-delay: 3.2s;  }
+.d25 { left: 90%;  font-size: 2rem;   animation-duration: 4.4s; animation-delay: 2s;    }
+
+#toggle:checked + #screen {
+  background: #050a18;
+  cursor: default;
+}
+
+#toggle:checked + #screen .hint {
+  opacity: 0;
+}
+
+#toggle:checked + #screen .drop {
+  opacity: 1;
+  animation-play-state: running;
+}
