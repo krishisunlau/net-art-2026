@@ -1,0 +1,81 @@
+body {
+    overflow: hidden;
+    background-image: url("censorship.png");
+    background-size: cover;        /* fills the screen */
+    background-position: center;   /* keeps it centered */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* stays still when scrolling */
+    
+    color: #d6f5d6;
+    font-family: "Courier New", monospace;
+  }
+  
+  .left {
+    width:25%;
+    display:block;
+    float:left;
+    padding-left:30px;
+    background-color: rgba(10, 40, 20, 0.85); /* slightly opaque dark green */
+    height: 100vh;
+  }
+  
+  .right {
+    width:70%;
+    display:block;
+    float:right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:100vh;
+    background-color: rgba(20, 60, 30, 0.75); /* lighter green transparent */
+    padding: 20px;
+  }
+  
+  img {
+    width:100%;
+    filter: grayscale(100%) brightness(0.7) sepia(100%) hue-rotate(70deg) saturate(200%);
+    /* gives that green surveillance tone */
+  }
+  
+  a {
+    color: #7CFF9E; /* neon green links */
+  }
+  
+  a:hover {
+    color: #baffc9;
+  }
+  
+  h1, h2 {
+    color: #a8ffb0;
+  }
+  
+  p {
+    color: #d6f5d6;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .left {
+      width:60%;
+      float:none;
+      margin:0 auto;
+      text-align:center;
+      padding:0px;
+    }
+    .right {
+      width:80%;
+      text-align:center;
+      float:none;
+      margin:0 auto;
+      overflow-y:hidden;
+      overflow-x:hidden;
+      height:auto;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .left {
+      width:100%;
+    }
+    .right {
+      width:100%;
+    }
+  }
