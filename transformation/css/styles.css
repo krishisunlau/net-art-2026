@@ -18,7 +18,7 @@ body {
   font-size: 20px;
   color: hotpink;
   padding: 12px 0;
-  background: rgba(255, 192, 203, 0.6);
+  background: #ffd6ec;
   z-index: 1000;
 }
 
