@@ -46,7 +46,7 @@ body {
 }
 
 .left {
-  left: calc(50% - 350px);
+  left: calc(50% - 500px);
 }
 
 .left::before {
