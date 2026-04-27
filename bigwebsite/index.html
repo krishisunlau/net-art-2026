@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scroll Faces</title>
+  <title>Decision Timeline</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <div id="instruction">
-    <div class="inTitle">Scroll Quest</div>
-    <img class="scrollImg" src="scroll.png" alt="Scroll icon">
-    <div class="inText">Start: <span class="inSpan">Scroll RIGHT →</span></div>
+  <div class="timeline">
+
+    <div class="event left" data-message="A small choice starts everything.">
+      <div class="bubble">Start</div>
+    </div>
+
+    <div class="event right" data-message="A new idea appears.">
+      <div class="bubble">Idea</div>
+    </div>
+
+    <div class="event left" data-message="You pause before choosing.">
+      <div class="bubble">Doubt</div>
+    </div>
+
+    <div class="event right" data-message="One path opens.">
+      <div class="bubble">Risk</div>
+    </div>
+
+    <div class="event left" data-message="Something changes.">
+      <div class="bubble">Shift</div>
+    </div>
+
+    <div class="event right" data-message="The choice becomes clearer.">
+      <div class="bubble">Clarity</div>
+    </div>
+
+    <div class="event left" data-message="Another version of life branches out.">
+      <div class="bubble">Branch</div>
+    </div>
+
+    <div class="event right" data-message="You keep moving.">
+      <div class="bubble">Continue</div>
+    </div>
+
   </div>
 
-  <div class="box second">
-    😊
-    <span class="note">Now scroll DOWN ↓</span>
-  </div>
+  <div id="messageBox"></div>
 
-  <div class="box third">
-    ☹️
-    <span class="note">Now scroll LEFT ←</span>
-  </div>
-
-  <div class="box fourth">
-    😍
-    <span class="note">Now scroll UP ↑</span>
-  </div>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
