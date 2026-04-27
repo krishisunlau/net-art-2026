@@ -2,6 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+body {
+  background: red;
+}
 
 body {
   min-height: 4200px;
