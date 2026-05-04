@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  min-height: 9000px;
+  min-height: 12000px;
   background: linear-gradient(#f2f2f2, #d9e8ff);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
@@ -13,7 +13,7 @@ body {
 .timeline {
   position: relative;
   width: 100%;
-  min-height: 9000px;
+  min-height: 12000px;
 }
 
 .timeline::before {
@@ -29,41 +29,45 @@ body {
 
 .event {
   position: absolute;
-  width: 380px;
-  height: 160px;
+  width: 400px;
+  height: 200px;
 }
 
-.event::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 170px;
-  height: 6px;
-  background-color: black;
-  transform: translateY(-50%);
-}
-
+/* LEFT SIDE */
 .left {
-  left: 50%;
-  transform: translateX(-120%);
+  left: calc(50% - 350px);
 }
 
 .left::before {
-  left: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -170px;
+  width: 170px;
+  height: 6px;
+  background: black;
+  transform: translateY(-50%);
 }
 
+/* RIGHT SIDE */
 .right {
-  left: 50%;
-  transform: translateX(20%);
+  left: calc(50% + 50px);
 }
 
 .right::before {
-  right: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -170px;
+  width: 170px;
+  height: 6px;
+  background: black;
+  transform: translateY(-50%);
 }
 
 .bubble {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: white;
   border: 6px solid black;
@@ -75,7 +79,7 @@ body {
   font-size: 20px;
   font-weight: 900;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   transition: 0.35s ease;
   cursor: pointer;
 }
@@ -87,14 +91,15 @@ body {
   box-shadow: 0 0 30px #3b8dff;
 }
 
-.event:nth-child(1) { top: 300px; }
-.event:nth-child(2) { top: 1500px; }
-.event:nth-child(3) { top: 2700px; }
-.event:nth-child(4) { top: 3900px; }
-.event:nth-child(5) { top: 5100px; }
-.event:nth-child(6) { top: 6300px; }
-.event:nth-child(7) { top: 7500px; }
-.event:nth-child(8) { top: 8700px; }
+/* SPACING (slower scroll) */
+.event:nth-child(1) { top: 500px; }
+.event:nth-child(2) { top: 2000px; }
+.event:nth-child(3) { top: 3500px; }
+.event:nth-child(4) { top: 5000px; }
+.event:nth-child(5) { top: 6500px; }
+.event:nth-child(6) { top: 8000px; }
+.event:nth-child(7) { top: 9500px; }
+.event:nth-child(8) { top: 11000px; }
 
 #messageBox {
   position: fixed;
