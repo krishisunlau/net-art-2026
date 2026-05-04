@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital@0;1&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  min-height: 12000px;
-  background: linear-gradient(#f2f2f2, #d9e8ff);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 30000px;
+  background: linear-gradient(180deg, #f2f2f2 0%, #dce8f5 40%, #c8d8ef 70%, #b0c8e8 100%);
+  font-family: 'Crimson Text', Georgia, serif;
   overflow-x: hidden;
 }
 
 .timeline {
   position: relative;
   width: 100%;
-  min-height: 12000px;
+  min-height: 30000px;
 }
 
 /* center vertical line */
@@ -22,100 +24,151 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 10px;
+  width: 3px;
   height: 100%;
-  background: black;
+  background: #1a1a1a;
   transform: translateX(-50%);
+}
+
+/* tick marks between events — small dashes on the center line */
+.tick {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 3px;
+  background: #1a1a1a;
 }
 
 /* each event takes full width */
 .event {
   position: absolute;
   width: 100%;
-  height: 200px;
+  height: 120px;
 }
 
-/* bubbles */
+/* bubbles — smaller */
 .bubble {
   position: absolute;
   top: 0;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: white;
-  border: 6px solid black;
-  box-shadow: 0 0 0 12px #7db7ff;
+  border: 3px solid #1a1a1a;
+  box-shadow: 0 0 0 8px #7db7ff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: 900;
-  font-size: 20px;
-  padding: 15px;
-  transition: 0.3s ease;
-  cursor: pointer;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #1a1a1a;
 }
 
-/* LEFT side */
+/* LEFT side bubble */
 .left .bubble {
-  right: calc(50% + 120px);
+  right: calc(50% + 80px);
 }
 
-/* RIGHT side */
+/* RIGHT side bubble */
 .right .bubble {
-  left: calc(50% + 120px);
+  left: calc(50% + 80px);
 }
 
 /* stems */
 .event::after {
   content: "";
   position: absolute;
-  top: 100px;
-  height: 6px;
-  background: black;
-  width: 114px;
+  top: 60px;
+  height: 3px;
+  background: #1a1a1a;
+  width: 80px;
 }
 
-/* left stem: goes from center line leftward to bubble */
 .left::after {
   left: 50%;
   transform: translateX(-100%);
 }
 
-/* right stem: goes from center line rightward to bubble */
 .right::after {
   left: 50%;
 }
 
-/* hover */
-.bubble:hover {
-  transform: scale(1.15);
-  background: #7db7ff;
-  color: white;
-}
-
-/* spacing (slow scroll) */
-.event:nth-child(1) { top: 500px; }
-.event:nth-child(2) { top: 2000px; }
-.event:nth-child(3) { top: 3500px; }
-.event:nth-child(4) { top: 5000px; }
-.event:nth-child(5) { top: 6500px; }
-.event:nth-child(6) { top: 8000px; }
-.event:nth-child(7) { top: 9500px; }
-.event:nth-child(8) { top: 11000px; }
-
-/* message box */
-#messageBox {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  max-width: 360px;
-  padding: 18px;
-  background: black;
-  color: white;
-  border: 4px solid #7db7ff;
-  font-size: 16px;
-  font-weight: 700;
+/* ── QUESTIONS ── */
+.question {
+  position: absolute;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #1a1a1a;
+  max-width: 220px;
+  line-height: 1.4;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(10px);
+  pointer-events: none;
 }
+
+.question.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LEFT event questions: spread to the left of center */
+.left .q1 {
+  top: -60px;
+  right: calc(50% + 60px);
+  text-align: right;
+  transition-delay: 0.1s;
+}
+.left .q2 {
+  top: 40px;
+  right: calc(50% + 220px);
+  text-align: right;
+  transition-delay: 0.4s;
+}
+.left .q3 {
+  top: 130px;
+  right: calc(50% + 60px);
+  text-align: right;
+  transition-delay: 0.7s;
+}
+
+/* RIGHT event questions: spread to the right of center */
+.right .q1 {
+  top: -60px;
+  left: calc(50% + 60px);
+  text-align: left;
+  transition-delay: 0.1s;
+}
+.right .q2 {
+  top: 40px;
+  left: calc(50% + 220px);
+  text-align: left;
+  transition-delay: 0.4s;
+}
+.right .q3 {
+  top: 130px;
+  left: calc(50% + 60px);
+  text-align: left;
+  transition-delay: 0.7s;
+}
+
+/* ── SPACING ── */
+.event:nth-child(1)  { top: 600px; }
+.event:nth-child(2)  { top: 2600px; }
+.event:nth-child(3)  { top: 4600px; }
+.event:nth-child(4)  { top: 6600px; }
+.event:nth-child(5)  { top: 8600px; }
+.event:nth-child(6)  { top: 10600px; }
+.event:nth-child(7)  { top: 12600px; }
+.event:nth-child(8)  { top: 14600px; }
+.event:nth-child(9)  { top: 16600px; }
+.event:nth-child(10) { top: 18600px; }
+.event:nth-child(11) { top: 20600px; }
+.event:nth-child(12) { top: 22600px; }
