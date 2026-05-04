@@ -73,18 +73,18 @@ body {
   top: 100px;
   height: 6px;
   background: black;
+  width: 114px;
 }
 
-/* left stem */
+/* left stem: goes from center line leftward to bubble */
 .left::after {
-  right: 50%;
-  width: 120px;
+  left: 50%;
+  transform: translateX(-100%);
 }
 
-/* right stem */
+/* right stem: goes from center line rightward to bubble */
 .right::after {
   left: 50%;
-  width: 120px;
 }
 
 /* hover */
