@@ -29,37 +29,14 @@ body {
 
 .event {
   position: absolute;
-  width: 400px;
-  height: 240px;
-}
-
-.left {
-  left: calc(50% - 580px);
-}
-
-.right {
-  left: calc(50% + 180px);
-}
-
-.event::before {
-  content: "";
-  position: absolute;
-  top: 120px;
-  height: 6px;
-  background-color: black;
-}
-
-.left::before {
-  left: 240px;
-  width: 340px;
-}
-
-.right::before {
-  left: -180px;
-  width: 180px;
+  left: 0;
+  width: 100%;
+  height: 260px;
 }
 
 .bubble {
+  position: absolute;
+  top: 0;
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -76,6 +53,34 @@ body {
   padding: 15px;
   transition: 0.35s ease;
   cursor: pointer;
+  z-index: 2;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  height: 6px;
+  background-color: black;
+  z-index: 1;
+}
+
+.left .bubble {
+  right: calc(50% + 180px);
+}
+
+.left::before {
+  left: calc(50% - 180px);
+  width: 180px;
+}
+
+.right .bubble {
+  left: calc(50% + 180px);
+}
+
+.right::before {
+  left: 50%;
+  width: 180px;
 }
 
 .bubble:hover {
