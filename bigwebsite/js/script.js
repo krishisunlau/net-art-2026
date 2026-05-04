@@ -1,23 +1,4 @@
-// ── Tick marks between events ──
-// Event tops (px) — must match CSS nth-child tops
-const eventTops = [600, 2600, 4600, 6600, 8600, 10600, 12600, 14600, 16600, 18600, 20600, 22600];
-const ticksPerGap = 6; // number of small ticks between each pair of events
-const timeline = document.querySelector('.timeline');
-
-for (let i = 0; i < eventTops.length - 1; i++) {
-  const from = eventTops[i] + 60; // center of bubble
-  const to = eventTops[i + 1] + 60;
-  const gap = to - from;
-
-  for (let t = 1; t <= ticksPerGap; t++) {
-    const tick = document.createElement('div');
-    tick.classList.add('tick');
-    tick.style.top = (from + (gap / (ticksPerGap + 1)) * t) + 'px';
-    timeline.appendChild(tick);
-  }
-}
-
-// ── Fade-in questions on scroll ──
+// ── Fade-in questions on scroll via IntersectionObserver ──
 const events = document.querySelectorAll('.event');
 
 const observer = new IntersectionObserver((entries) => {
@@ -28,7 +9,34 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.3
+  threshold: 0.2
 });
 
 events.forEach(event => observer.observe(event));
+
+// ── Tick marks: injected between each event ──
+// We wait for layout, then measure event positions and place ticks
+window.addEventListener('load', () => {
+  const timeline = document.querySelector('.timeline');
+  const eventEls = Array.from(document.querySelectorAll('.event'));
+  const ticksPerGap = 5;
+
+  for (let i = 0; i < eventEls.length - 1; i++) {
+    const aRect = eventEls[i].getBoundingClientRect();
+    const bRect = eventEls[i + 1].getBoundingClientRect();
+
+    // top of each event relative to .timeline
+    const timelineTop = timeline.getBoundingClientRect().top;
+    const aCenter = (aRect.top - timelineTop) + window.scrollY + aRect.height / 2;
+    const bCenter = (bRect.top - timelineTop) + window.scrollY + bRect.height / 2;
+
+    const gap = bCenter - aCenter;
+
+    for (let t = 1; t <= ticksPerGap; t++) {
+      const tick = document.createElement('div');
+      tick.classList.add('tick');
+      tick.style.top = (aCenter + (gap / (ticksPerGap + 1)) * t) + 'px';
+      timeline.appendChild(tick);
+    }
+  }
+});

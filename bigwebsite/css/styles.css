@@ -6,16 +6,19 @@ html, body {
 }
 
 body {
-  min-height: 30000px;
   background: linear-gradient(180deg, #f2f2f2 0%, #dce8f5 40%, #c8d8ef 70%, #b0c8e8 100%);
+  background-attachment: fixed;
   font-family: 'Crimson Text', Georgia, serif;
   overflow-x: hidden;
 }
 
+/* ── TIMELINE WRAPPER ── */
 .timeline {
   position: relative;
   width: 100%;
-  min-height: 30000px;
+  padding-top: 200px;
+  padding-bottom: 400px;
+  box-sizing: border-box;
 }
 
 /* center vertical line */
@@ -30,7 +33,7 @@ body {
   transform: translateX(-50%);
 }
 
-/* tick marks between events — small dashes on the center line */
+/* tick marks */
 .tick {
   position: absolute;
   left: 50%;
@@ -40,19 +43,20 @@ body {
   background: #1a1a1a;
 }
 
-/* each event takes full width */
+/* ── EVENT BLOCK ── */
 .event {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 120px;
+  height: 500px;
+  margin-bottom: 1000px;
 }
 
-/* bubbles — smaller */
+/* ── BUBBLE ── */
 .bubble {
   position: absolute;
-  top: 0;
-  width: 120px;
-  height: 120px;
+  top: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: white;
   border: 3px solid #1a1a1a;
@@ -63,28 +67,27 @@ body {
   text-align: center;
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.03em;
   padding: 10px;
   box-sizing: border-box;
   color: #1a1a1a;
+  z-index: 2;
 }
 
-/* LEFT side bubble */
 .left .bubble {
   right: calc(50% + 80px);
 }
 
-/* RIGHT side bubble */
 .right .bubble {
   left: calc(50% + 80px);
 }
 
-/* stems */
+/* ── STEMS ── */
 .event::after {
   content: "";
   position: absolute;
-  top: 60px;
+  top: 220px;
   height: 3px;
   background: #1a1a1a;
   width: 80px;
@@ -104,71 +107,63 @@ body {
   position: absolute;
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 17px;
+  font-size: 16px;
   color: #1a1a1a;
-  max-width: 220px;
-  line-height: 1.4;
+  max-width: 180px;
+  line-height: 1.5;
   opacity: 0;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  transform: translateY(10px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .question.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none !important;
 }
 
-/* LEFT event questions: spread to the left of center */
+/* LEFT event: bubble is on the left side, questions fan out to the LEFT of center */
 .left .q1 {
-  top: -60px;
-  right: calc(50% + 60px);
+  top: 100px;
+  right: calc(50% + 240px); /* further left than the bubble */
   text-align: right;
-  transition-delay: 0.1s;
+  transform: translateX(-10px);
+  transition-delay: 0.15s;
 }
 .left .q2 {
-  top: 40px;
-  right: calc(50% + 220px);
+  top: 210px;
+  right: calc(50% + 250px);
   text-align: right;
-  transition-delay: 0.4s;
+  transform: translateX(-10px);
+  transition-delay: 0.5s;
 }
 .left .q3 {
-  top: 130px;
-  right: calc(50% + 60px);
+  top: 320px;
+  right: calc(50% + 240px);
   text-align: right;
-  transition-delay: 0.7s;
+  transform: translateX(-10px);
+  transition-delay: 0.85s;
 }
 
-/* RIGHT event questions: spread to the right of center */
+/* RIGHT event: bubble is on the right side, questions fan out to the RIGHT of center */
 .right .q1 {
-  top: -60px;
-  left: calc(50% + 60px);
+  top: 100px;
+  left: calc(50% + 240px); /* further right than the bubble */
   text-align: left;
-  transition-delay: 0.1s;
+  transform: translateX(10px);
+  transition-delay: 0.15s;
 }
 .right .q2 {
-  top: 40px;
-  left: calc(50% + 220px);
+  top: 210px;
+  left: calc(50% + 250px);
   text-align: left;
-  transition-delay: 0.4s;
+  transform: translateX(10px);
+  transition-delay: 0.5s;
 }
 .right .q3 {
-  top: 130px;
-  left: calc(50% + 60px);
+  top: 320px;
+  left: calc(50% + 240px);
   text-align: left;
-  transition-delay: 0.7s;
+  transform: translateX(10px);
+  transition-delay: 0.85s;
 }
-
-/* ── SPACING ── */
-.event:nth-child(1)  { top: 600px; }
-.event:nth-child(2)  { top: 2600px; }
-.event:nth-child(3)  { top: 4600px; }
-.event:nth-child(4)  { top: 6600px; }
-.event:nth-child(5)  { top: 8600px; }
-.event:nth-child(6)  { top: 10600px; }
-.event:nth-child(7)  { top: 12600px; }
-.event:nth-child(8)  { top: 14600px; }
-.event:nth-child(9)  { top: 16600px; }
-.event:nth-child(10) { top: 18600px; }
-.event:nth-child(11) { top: 20600px; }
-.event:nth-child(12) { top: 22600px; }
