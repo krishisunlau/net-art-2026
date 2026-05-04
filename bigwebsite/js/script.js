@@ -1,4 +1,3 @@
-// ── Fade-in questions on scroll via IntersectionObserver ──
 const events = document.querySelectorAll('.event');
 
 const observer = new IntersectionObserver((entries) => {
@@ -14,8 +13,7 @@ const observer = new IntersectionObserver((entries) => {
 
 events.forEach(event => observer.observe(event));
 
-// ── Tick marks: injected between each event ──
-// We wait for layout, then measure event positions and place ticks
+
 window.addEventListener('load', () => {
   const timeline = document.querySelector('.timeline');
   const eventEls = Array.from(document.querySelectorAll('.event'));
@@ -25,7 +23,6 @@ window.addEventListener('load', () => {
     const aRect = eventEls[i].getBoundingClientRect();
     const bRect = eventEls[i + 1].getBoundingClientRect();
 
-    // top of each event relative to .timeline
     const timelineTop = timeline.getBoundingClientRect().top;
     const aCenter = (aRect.top - timelineTop) + window.scrollY + aRect.height / 2;
     const bCenter = (bRect.top - timelineTop) + window.scrollY + bRect.height / 2;

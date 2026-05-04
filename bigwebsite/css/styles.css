@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── TIMELINE WRAPPER ── */
 .timeline {
   position: relative;
   width: 100%;
@@ -21,7 +20,6 @@ body {
   box-sizing: border-box;
 }
 
-/* center vertical line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -33,7 +31,6 @@ body {
   transform: translateX(-50%);
 }
 
-/* tick marks */
 .tick {
   position: absolute;
   left: 50%;
@@ -43,7 +40,6 @@ body {
   background: #1a1a1a;
 }
 
-/* ── EVENT BLOCK ── */
 .event {
   position: relative;
   width: 100%;
@@ -51,7 +47,7 @@ body {
   margin-bottom: 1000px;
 }
 
-/* ── BUBBLE ── */
+
 .bubble {
   position: absolute;
   top: 150px;
@@ -102,7 +98,7 @@ body {
   left: 50%;
 }
 
-/* ── QUESTIONS ── */
+
 .question {
   position: absolute;
   font-family: 'Playfair Display', Georgia, serif;
@@ -122,10 +118,9 @@ body {
   transform: none !important;
 }
 
-/* LEFT event: bubble is on the left side, questions fan out to the LEFT of center */
 .left .q1 {
   top: 100px;
-  right: calc(50% + 240px); /* further left than the bubble */
+  right: calc(50% + 240px); 
   text-align: right;
   transform: translateX(-10px);
   transition-delay: 0.15s;
@@ -145,10 +140,9 @@ body {
   transition-delay: 0.85s;
 }
 
-/* RIGHT event: bubble is on the right side, questions fan out to the RIGHT of center */
 .right .q1 {
   top: 100px;
-  left: calc(50% + 240px); /* further right than the bubble */
+  left: calc(50% + 240px); 
   text-align: left;
   transform: translateX(10px);
   transition-delay: 0.15s;
